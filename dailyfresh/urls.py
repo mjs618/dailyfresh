@@ -18,9 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^user/', include('apps.user', namespace='user')),     # 配置用户路由
-    url(r'^order/', include('apps.order', namespace='order')),      # 配置订单路由
-    url(r'^cart/', include('apps.cart', namespace='cart')),     # 配置购物路由
-    url(r'^', include('apps.goods', namespace='goods')),    # 配置商品路由
+    url(r'^user/', include('apps.user.urls', namespace='user')),     # 配置用户路由
+    url(r'^order/', include('apps.order.urls', namespace='order')),      # 配置订单路由
+    url(r'^cart/', include('apps.cart.urls', namespace='cart')),     # 配置购物路由
+    url(r'^', include('apps.goods.urls', namespace='goods')),    # 配置商品路由
     url(r'^tinymce/', include('tinymce.urls')),     # 配置富文本编辑器路由
 ]
